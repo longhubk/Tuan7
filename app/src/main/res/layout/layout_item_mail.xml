@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+	
+    <TextView android:layout_width="70dp"
+              android:background="@drawable/round_background"
+              android:text="T"
+              android:textSize="40dp"
+              android:textColor="#FFF"
+              android:gravity="center"
+              android:id="@+id/text_letter"
+              android:layout_height="70dp"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:id="@+id/text_name"
+              android:layout_toRightOf="@+id/text_letter"
+              android:textSize="23sp"
+              android:text="hello world"
+              android:layout_marginLeft = "10dp"
+              android:layout_height="wrap_content"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:id="@+id/text_subject"
+              android:layout_toRightOf="@+id/text_letter"
+              android:textSize="16sp"
+              android:singleLine="true"
+              android:layout_toLeftOf="@id/img_fav"
+              android:layout_below="@id/text_name"
+              android:text="hello world"
+              android:layout_marginLeft = "10dp"
+              android:layout_height="wrap_content"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:id="@+id/text_content"
+              android:layout_toRightOf="@+id/text_letter"
+              android:textSize="15sp"
+              android:singleLine="true"
+              android:layout_toLeftOf="@id/img_fav"
+              android:layout_below="@id/text_subject"
+              android:text="hello world"
+              android:layout_marginLeft = "10dp"
+              android:layout_height="wrap_content"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_alignParentRight="true"
+              android:text="12:00 PM"
+              android:textSize="14sp"
+              android:layout_marginTop="10dp"
+              android:layout_marginRight="5dp"
+              android:id="@+id/text_time"
+              android:layout_height="wrap_content"/>
+
+    <ImageView android:layout_width="40dp"
+               android:id="@+id/img_fav"
+               android:src="@drawable/star_boder"
+               android:layout_alignParentRight="true"
+               android:layout_marginTop="34dp"
+               android:layout_height="40dp"/>
+
+</RelativeLayout>
