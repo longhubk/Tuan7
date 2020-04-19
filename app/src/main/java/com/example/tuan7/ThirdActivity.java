@@ -43,6 +43,7 @@ public class ThirdActivity extends AppCompatActivity {
 			@Override
 			public void afterTextChanged(Editable s) {
 				filter(s.toString());
+
 			}
 		});
 
@@ -95,12 +96,21 @@ public class ThirdActivity extends AppCompatActivity {
 
 	private void filter(String text){
 		ArrayList<EmailItemModel> fileredList = new ArrayList<>();
-		for(EmailItemModel item: items){
-			if(item.getName().toLowerCase().contains(text.toLowerCase())){
-				fileredList.add(item);
+		if(text.length() > 2){
+			for(EmailItemModel item: items){
+				if(item.getName().toLowerCase().contains(text.toLowerCase()) ||
+					item.getSubject().toLowerCase().contains(text.toLowerCase())||
+					item.getContent().toLowerCase().contains(text.toLowerCase())
+
+				){
+					fileredList.add(item);
+				}
+
 			}
 
-		}
+		}else
+			fileredList = (ArrayList<EmailItemModel>) items;
+
 		emailItemAdapter.filterList(fileredList);
 	}
 
